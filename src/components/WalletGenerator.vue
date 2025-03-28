@@ -33,7 +33,11 @@
         <div v-if="dropdownOpen" class="design-grid">
           <div v-for="design in designs" :key="design.id" class="design-preview">
             <img :src="design.image" :alt="'Design ' + design.id" class="design-image" />
-            <div class="overlay"></div>
+            <div class="overlay">
+            <h3 class="wallet-name" :style="{ name: design.name}">
+              {{ design.name }}
+            </h3>
+          </div>
             <button class="select-button" @click="proceedToCustomization(design)">
               Select and Continue
             </button>
@@ -195,16 +199,16 @@ export default {
       encryptOption: false,
       passphrase: '',
       designs: [
-        { id: 1, image: "src/assets/bluelightver.png", textColor: 'black' },
-        { id: 2, image: "src/assets/bluedarkver.png", textColor: 'black' },
-        { id: 3, image: "src/assets/redlightver.png", textColor: 'black' },
-        { id: 4, image: "src/assets/reddarkver.png", textColor: 'black' },
-        { id: 5, image: "src/assets/bluedarkgradientver.png", textColor: 'black' },
-        { id: 6, image: "src/assets/reddarkgradientver.png", textColor: 'black' },
-        { id: 7, image: "src/assets/randb-gradver.png", textColor: 'black' },
-        { id: 8, image: "src/assets/puredarkver.png", textColor: 'black' },
-        { id: 9, image: "src/assets/black-bluever.png", textColor: 'black' },
-        { id: 10, image: "src/assets/black-redver.png", textColor: 'black' },
+        { id: 1, image: "src/assets/bluelightver.png", textColor: 'black', name: "light cool blue" },
+        { id: 2, image: "src/assets/bluedarkver.png", textColor: 'black', name: "blue ebony gray"},
+        { id: 3, image: "src/assets/redlightver.png", textColor: 'black', name: "light carnation" },
+        { id: 4, image: "src/assets/reddarkver.png", textColor: 'black', name: "red ebony gray" },
+        { id: 5, image: "src/assets/bluedarkgradientver.png", textColor: 'black', name: "gradient cool blue" },
+        { id: 6, image: "src/assets/reddarkgradientver.png", textColor: 'black', name: "gradient carnation" },
+        { id: 7, image: "src/assets/randb-gradver.png", textColor: 'black', name: "light gradient" },
+        { id: 8, image: "src/assets/puredarkver.png", textColor: 'black', name: "ebony gray" },
+        { id: 9, image: "src/assets/black-bluever.png", textColor: 'black', name: "blue dark mode" },
+        { id: 10, image: "src/assets/black-redver.png", textColor: 'black', name: "red dark mode"},
       ],
     };
   },
@@ -937,8 +941,9 @@ font-family: 'Lexend';
 
 .design-grid {
   display: grid;
-  margin-left: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-left: 50px 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, auto-fit);
   gap: 15px;
   justify-content: center;
   align-items: center;
@@ -982,16 +987,16 @@ font-family: 'Lexend';
 
 .select-button {
   font-family: 'Lexend', sans-serif;
-  font-size: 100px; 
+  font-size: 15px; 
   position: absolute;
-  bottom: 90px;
+  bottom: 85px;
   background: rgb(51 65 85);
   color: #ccc;
   border: none;
-  padding: 15px 30px;
+  padding: 15px 15px;
   width: 200px;
-  height: 30px;
-  border-radius: 10px;
+  height: 20%;
+  border-radius: 15px;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.4s ease-in-out, transform 0.5s ease-in-out;
@@ -1054,6 +1059,17 @@ font-family: 'Lexend';
 .selected-design .qr-code {
   width: 101.9px; 
   height: 101.9px;
+}
+
+.wallet-name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5cap;
+  font-family: 'Lexend', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fcf9f6f2;
 }
 
 .wallet-address{
