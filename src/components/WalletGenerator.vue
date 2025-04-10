@@ -199,16 +199,16 @@ export default {
       encryptOption: false,
       passphrase: '',
       designs: [
-        { id: 1, image: "src/assets/bluelightver.png", textColor: 'black', name: "light cool blue" },
-        { id: 2, image: "src/assets/bluedarkver.png", textColor: 'black', name: "blue ebony gray"},
-        { id: 3, image: "src/assets/redlightver.png", textColor: 'black', name: "light carnation" },
-        { id: 4, image: "src/assets/reddarkver.png", textColor: 'black', name: "red ebony gray" },
-        { id: 5, image: "src/assets/bluedarkgradientver.png", textColor: 'black', name: "gradient cool blue" },
-        { id: 6, image: "src/assets/reddarkgradientver.png", textColor: 'black', name: "gradient carnation" },
-        { id: 7, image: "src/assets/randb-gradver.png", textColor: 'black', name: "light gradient" },
-        { id: 8, image: "src/assets/puredarkver.png", textColor: 'black', name: "ebony gray" },
-        { id: 9, image: "src/assets/black-bluever.png", textColor: 'black', name: "blue dark mode" },
-        { id: 10, image: "src/assets/black-redver.png", textColor: 'black', name: "red dark mode"},
+        { id: 1, image: "src/assets/1.png", textColor: 'black', name: "Paytaca ver.1" },
+        { id: 2, image: "src/assets/2.png", textColor: 'black', name: "Paytaca ver.2"},
+        { id: 3, image: "src/assets/3.png", textColor: 'black', name: "Ebony Gray Blue" },
+        { id: 4, image: "src/assets/4.png", textColor: 'black', name: "Cool Blue" },
+        { id: 5, image: "src/assets/5.png", textColor: 'black', name: "Ebony Gray Red" },
+        { id: 6, image: "src/assets/6.png", textColor: 'black', name: "Carnation" },
+        { id: 7, image: "src/assets/7.png", textColor: 'black', name: "Paytaca Gradient" },
+        { id: 8, image: "src/assets/8.png", textColor: 'black', name: "Ebony Gray" },
+        { id: 9, image: "src/assets/9.png", textColor: 'black', name: "Gradient Cool Blue" },
+        { id: 10, image: "src/assets/10.png", textColor: 'black', name: "Gradient Carnation"},
       ],
     };
   },
@@ -941,7 +941,7 @@ font-family: 'Lexend';
 
 .design-grid {
   display: grid;
-  margin-left: 50px 50px;
+  margin-left: 30px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(7, auto-fit);
   gap: 15px;
